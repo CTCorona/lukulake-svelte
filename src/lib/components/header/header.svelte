@@ -1,8 +1,7 @@
 <script>
+	import Logo from '$lib/assets/icons/logo.svelte';
 	import Button from '$lib/components/ui/button.svelte';
-	import Logo from '$lib/assets/logo.svelte';
 	import { css } from 'styled-system/css';
-	import { browser } from '$app/environment';
 
 	const headerStyle = css({
 		bg: 'white',
@@ -18,15 +17,12 @@
 		}
 	});
 
-	const goToMovimiento = () => {
-	}
-
 </script>
 
 <header class={headerStyle}>
 	<Logo />
 
-	<Button type="primary" onclick={goToMovimiento}>
+	<Button type="primary">
 		Contacto
 	</Button>
 </header>
