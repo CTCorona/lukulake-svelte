@@ -9,6 +9,7 @@
 		display: 'flex',
 		alignItems: 'center',
 		justifyContent: 'space-between',
+		mb: 12,
 		zIndex: 1,
 		pos: 'sticky',
 		top: 0,
