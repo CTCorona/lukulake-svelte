@@ -1,16 +1,18 @@
 <script lang="ts">
-	import '../app.css';
+	import Footer from '$lib/components/footer/footer.svelte';
 	import Header from '$lib/components/header/header.svelte';
 	import 'lenis/dist/lenis.css';
 	import { container } from 'styled-system/patterns';
+	import '../app.css';
 
 	const { children } = $props();
 </script>
 
 <Header />
-<main class={container({minH: "300vh"})}>
+<main class={container()}>
 	{@render children()}
 </main>
+<Footer />
 
 <style>
 	:global {

@@ -1,5 +1,5 @@
 <script>
-	import Logo from '$lib/assets/icons/logo.svelte';
+	import Logo from '$lib/assets/icons/logo-icon.svelte';
 	import Button from '$lib/components/ui/button.svelte';
 	import { css } from 'styled-system/css';
 
@@ -9,6 +9,7 @@
 		display: 'flex',
 		alignItems: 'center',
 		justifyContent: 'space-between',
+		mb: 12,
 		zIndex: 1,
 		pos: 'sticky',
 		top: 0,

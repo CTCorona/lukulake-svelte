@@ -15,15 +15,15 @@ export const buttonRecipe = defineRecipe({
 	variants: {
 		type: {
 			primary: {
-				bg: 'primary.main',
+				bg: 'primary',
 				_hover: {
-					bg: 'primary._hover'
+					bg: 'primary'
 				}
 			},
 			secondary: {
-				bg: 'secondary.main',
+				bg: 'secondary',
 				_hover: {
-					bg: 'secondary._hover'
+					bg: 'secondary'
 				}
 			}
 		}

@@ -1,7 +1,7 @@
 import { defineConfig } from '@pandacss/dev';
-import { buttonRecipe } from './src/lib/components/ui/recipes/button';
-import { typographyRecipe } from './src/lib/components/ui/recipes/typography';
-import { headingRecipe } from './src/lib/components/ui/recipes/heading';
+import { buttonRecipe } from './src/lib/components/ui/recipes/buttonRecipe';
+import { headingRecipe } from './src/lib/components/ui/recipes/headingRecipe';
+import { typographyRecipe } from './src/lib/components/ui/recipes/typographyRecipe';
 
 export default defineConfig({
 	// Whether to use css reset
@@ -18,29 +18,43 @@ export default defineConfig({
 		extend: {
 			tokens: {
 				colors: {
-					primary: {
-						main: {
+					blue: {
+						darkest: {
 							value: '#003866'
 						},
-						light: {
-							value: 'rgb(230,237,242)'
-						},
-						light2: {
+						medium: {
 							value: '#9fbace'
 						},
-						_hover: {
-							value: 'rgba(0,46,84,1)'
-						}
+						light: {
+							value: '#e6edf2'
+						},
+						extraLight: {
+							value: '#eaf2f880'
+						},
 					},
-					secondary: {
-						main: {
+					orange: {
+						darkest: {
 							value: '#ED752A'
 						},
 						light: {
 							value: '#ffc29c'
 						},
-						_hover: {
-							value: 'rgb(196,96,33)'
+					}
+				}
+			},
+			semanticTokens: {
+				colors: {
+					primary: {
+						DEFAULT: {
+							value: '{colors.blue.darkest}'
+						},
+						contrast: {
+							value: '{colors.blue.medium}'
+						}
+					},
+					secondary: {
+						DEFAULT: {
+							value: '{colors.orange.darkest}'
 						}
 					}
 				}
