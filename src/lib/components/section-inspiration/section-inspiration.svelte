@@ -8,7 +8,7 @@
 </script>
 
 <section id="inspiration">
-	<Heading tag="h2">Su curiosidad, nuestra inspiración</Heading>
+	<Heading gutterBottom tag="h2">Su curiosidad, nuestra inspiración</Heading>
 	<div class={hstack({ alignItems: 'flex-start', gap: 10 })}>
 		<enhanced:img
 			class={css({ mt: 16 })}

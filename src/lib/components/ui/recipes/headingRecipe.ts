@@ -20,8 +20,5 @@ export const headingRecipe = defineRecipe({
 				mb: 3
 			}
 		}
-	},
-	defaultVariants: {
-		gutterBottom: false
 	}
 });
