@@ -6,10 +6,22 @@ export const headingRecipe = defineRecipe({
 	base: {
 		fontWeight: 'bold',
 		textAlign: 'center',
-		mb: '3',
 		fontSize: {
 			base: '3xl',
 			lg: '6xl'
 		}
+	},
+	variants: {
+		gutterBottom: {
+			true: {
+				mb: 10
+			},
+			false: {
+				mb: 3
+			}
+		}
+	},
+	defaultVariants: {
+		gutterBottom: false
 	}
 });
