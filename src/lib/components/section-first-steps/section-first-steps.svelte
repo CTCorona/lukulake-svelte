@@ -6,6 +6,7 @@
 	import Typography from '$lib/components/ui/typography.svelte';
 	import { css } from 'styled-system/css';
 	import { hstack, vstack } from 'styled-system/patterns';
+	import { type Component } from 'svelte';
 
 	const gridItems = [
 		{
@@ -29,7 +30,7 @@
 	];
 </script>
 
-{#snippet item(icon: any, title: string, description: string)}
+{#snippet item(icon: Component, title: string, description: string)}
 	<article class={vstack({ gap: 4, maxW: '80' })}>
 		<svelte:component this={icon} />
 		<h3 class={css({ fontWeight: 'bold', fontSize: '2xl' })}>{title}</h3>

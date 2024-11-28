@@ -30,7 +30,7 @@ export default defineConfig({
 						},
 						extraLight: {
 							value: '#eaf2f880'
-						},
+						}
 					},
 					orange: {
 						darkest: {
@@ -38,7 +38,7 @@ export default defineConfig({
 						},
 						light: {
 							value: '#ffc29c'
-						},
+						}
 					}
 				}
 			},
@@ -47,6 +47,9 @@ export default defineConfig({
 					primary: {
 						DEFAULT: {
 							value: '{colors.blue.darkest}'
+						},
+						light: {
+							value: '{colors.blue.light}'
 						},
 						contrast: {
 							value: '{colors.blue.medium}'
