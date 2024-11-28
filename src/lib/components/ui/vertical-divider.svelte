@@ -11,7 +11,7 @@
 	const lineStyle = css({
 		w: "full",
 		h: "full",
-		bg: "secondary.main",
+		bg: "secondary",
 		display: "block",
 		transformOrigin: "top",
 	});
