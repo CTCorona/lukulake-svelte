@@ -1,7 +1,4 @@
 import { defineConfig } from '@pandacss/dev';
-import { buttonRecipe } from './src/lib/components/ui/recipes/buttonRecipe';
-import { headingRecipe } from './src/lib/components/ui/recipes/headingRecipe';
-import { typographyRecipe } from './src/lib/components/ui/recipes/typographyRecipe';
 
 export default defineConfig({
 	// Whether to use css reset
@@ -40,6 +37,11 @@ export default defineConfig({
 							value: '#ffc29c'
 						}
 					}
+				},
+				borders: {
+					main: {
+						value: '8px solid {colors.blue.medium}'
+					}
 				}
 			},
 			semanticTokens: {
@@ -61,11 +63,6 @@ export default defineConfig({
 						}
 					}
 				}
-			},
-			recipes: {
-				button: buttonRecipe,
-				typography: typographyRecipe,
-				heading: headingRecipe
 			}
 		}
 	},
