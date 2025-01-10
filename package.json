@@ -40,6 +40,7 @@
 	"dependencies": {
 		"@pandacss/studio": "^0.48.0",
 		"gsap": "^3.12.5",
-		"lenis-svelte": "^0.2.0"
+		"lenis-svelte": "^0.2.0",
+		"motion": "^11.17.0"
 	}
 }
