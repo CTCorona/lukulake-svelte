@@ -1,10 +1,11 @@
 <script lang="ts">
 	import { cva } from 'styled-system/css';
 	import type { Snippet } from 'svelte';
+	import type { SvelteHTMLElements } from 'svelte/elements';
 
-	type Props = {
+	type Props = SvelteHTMLElements['button'] & {
 		children: Snippet;
-		type?: 'primary' | 'secondary';
+		variant?: 'primary' | 'secondary';
 	};
 
 	const buttonStyle = cva({
@@ -18,7 +19,7 @@
 			color: 'white'
 		},
 		variants: {
-			type: {
+			variant: {
 				primary: {
 					bgColor: 'primary',
 					_hover: {
@@ -34,13 +35,13 @@
 			}
 		},
 		defaultVariants: {
-			type: 'primary'
+			variant: 'primary'
 		}
 	});
 
-	const { children, type, ...rest }: Props = $props();
+	const { children, variant, ...rest }: Props = $props();
 </script>
 
-<button class={buttonStyle({ type })} {...rest}>
+<button class={buttonStyle({ variant })} {...rest}>
 	{@render children()}
 </button>
