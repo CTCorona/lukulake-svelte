@@ -9,6 +9,8 @@
 <section id="descubre">
 	<Animation>
 		<Heading tag="h1">Bienvenidos al mundo Luku Lake</Heading>
+	</Animation>
+	<Animation delay={0.2}>
 		<Typography align="center">
 			Un espacio creativo donde descubrirás productos para bebés y en el que respetamos la
 			naturaleza y el movimiento orgánico

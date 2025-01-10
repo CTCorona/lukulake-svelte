@@ -87,11 +87,11 @@
 	<Animation>
 		<Heading>Descubre todos los modelos</Heading>
 	</Animation>
-	<Animation>
-		<div class={hstack({ gap: 10, justifyContent: 'center' })}>
-			{#each shoeSizes as cardShoe}
+	<div class={hstack({ gap: 10, justifyContent: 'center' })}>
+		{#each shoeSizes as cardShoe, index}
+			<Animation delay={index * 0.2}>
 				{@render card(cardShoe)}
-			{/each}
-		</div>
-	</Animation>
+			</Animation>
+		{/each}
+	</div>
 </section>

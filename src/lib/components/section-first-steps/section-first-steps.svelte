@@ -42,16 +42,18 @@
 <section id="first-steps">
 	<Animation>
 		<Heading tag="h2">Primeros pasos libres y naturales</Heading>
+	</Animation>
+	<Animation delay={0.2}>
 		<Typography>
 			Zapatos ligeros, flexibles y sostenibles que se adaptan tanto a los movimientos del bebé que
 			tendrá la sensación de caminar descalzo. Y nosotros, la seguridad de que está protegido
 		</Typography>
 	</Animation>
-	<Animation>
-		<div class={hstack({ justifyContent: 'center', gap: 10 })}>
-			{#each gridItems as gridItem}
+	<div class={hstack({ justifyContent: 'center', gap: 10 })}>
+		{#each gridItems as gridItem, index}
+			<Animation delay={index * 0.2}>
 				{@render item(gridItem.icon, gridItem.title, gridItem.description)}
-			{/each}
-		</div>
-	</Animation>
+			</Animation>
+		{/each}
+	</div>
 </section>

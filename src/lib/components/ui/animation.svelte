@@ -1,22 +1,35 @@
 <script lang="ts">
 	import { animate, inView } from 'motion';
+	import { css } from 'styled-system/css';
 	import { type Snippet } from 'svelte';
+
+	const animationWrapperStyle = css({
+		overflow: 'hidden'
+	});
+
+	const animationChildStyle = css({
+		display: 'inline-block',
+		width: '100%',
+		transform: 'translateY(100%)'
+	});
 
 	type Props = {
 		children: Snippet;
+		delay?: number;
 	};
 
-	const { children }: Props = $props();
+	const { children, delay = 0 }: Props = $props();
+
+	let ref: HTMLDivElement;
 
 	$effect(() => {
 		inView(
-			'.animation-wrapper',
+			ref,
 			(child) => {
-				console.log(child.target);
 				animate(
 					child.target.querySelector('.animation-child')!,
 					{ y: ['100%', 0] },
-					{ duration: 0.5 }
+					{ duration: 0.5, delay }
 				);
 			},
 			{ margin: '0px 0px -300px 0px' }
@@ -24,11 +37,8 @@
 	});
 </script>
 
-<div class="animation-wrapper" style="overflow: hidden;">
-	<div
-		class="animation-child"
-		style="display: inline-block; width: 100%; transform: translateY(100%);"
-	>
+<div class={`animation-wrapper ${animationWrapperStyle}`} bind:this={ref}>
+	<div class={`animation-child ${animationChildStyle}`}>
 		{@render children()}
 	</div>
 </div>
