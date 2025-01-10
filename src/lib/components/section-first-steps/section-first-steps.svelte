@@ -2,6 +2,7 @@
 	import FlexibleIcon from '$lib/assets/icons/flexible-icon.svelte';
 	import SustainableIcon from '$lib/assets/icons/sustainable-icon.svelte';
 	import WalkingIcon from '$lib/assets/icons/walking-icon.svelte';
+	import Animation from '$lib/components/ui/animation.svelte';
 	import Heading from '$lib/components/ui/heading.svelte';
 	import Typography from '$lib/components/ui/typography.svelte';
 	import { css } from 'styled-system/css';
@@ -39,14 +40,20 @@
 {/snippet}
 
 <section id="first-steps">
-	<Heading tag="h2">Primeros pasos libres y naturales</Heading>
-	<Typography>
-		Zapatos ligeros, flexibles y sostenibles que se adaptan tanto a los movimientos del bebé que
-		tendrá la sensación de caminar descalzo. Y nosotros, la seguridad de que está protegido
-	</Typography>
+	<Animation>
+		<Heading tag="h2">Primeros pasos libres y naturales</Heading>
+	</Animation>
+	<Animation delay={0.2}>
+		<Typography>
+			Zapatos ligeros, flexibles y sostenibles que se adaptan tanto a los movimientos del bebé que
+			tendrá la sensación de caminar descalzo. Y nosotros, la seguridad de que está protegido
+		</Typography>
+	</Animation>
 	<div class={hstack({ justifyContent: 'center', gap: 10 })}>
-		{#each gridItems as gridItem}
-			{@render item(gridItem.icon, gridItem.title, gridItem.description)}
+		{#each gridItems as gridItem, index}
+			<Animation delay={index * 0.2}>
+				{@render item(gridItem.icon, gridItem.title, gridItem.description)}
+			</Animation>
 		{/each}
 	</div>
 </section>

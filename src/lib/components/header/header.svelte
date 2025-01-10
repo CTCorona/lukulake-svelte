@@ -17,6 +17,7 @@
 			pos: 'sticky',
 			top: 0,
 			transition: 'shadow',
+			transitionDuration: '300ms',
 			md: {
 				px: '24'
 			}

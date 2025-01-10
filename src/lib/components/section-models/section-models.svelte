@@ -2,6 +2,7 @@
 	import FoxIcon from '$lib/assets/icons/fox-icon.svelte';
 	import MooseIcon from '$lib/assets/icons/moose-icon.svelte';
 	import OwlIcon from '$lib/assets/icons/owl-icon.svelte';
+	import Animation from '$lib/components/ui/animation.svelte';
 	import Heading from '$lib/components/ui/heading.svelte';
 	import { css } from 'styled-system/css';
 	import { hstack } from 'styled-system/patterns';
@@ -83,10 +84,14 @@
 {/snippet}
 
 <section id="models">
-	<Heading>Descubre todos los modelos</Heading>
+	<Animation>
+		<Heading>Descubre todos los modelos</Heading>
+	</Animation>
 	<div class={hstack({ gap: 10, justifyContent: 'center' })}>
-		{#each shoeSizes as cardShoe}
-			{@render card(cardShoe)}
+		{#each shoeSizes as cardShoe, index}
+			<Animation delay={index * 0.2}>
+				{@render card(cardShoe)}
+			</Animation>
 		{/each}
 	</div>
 </section>

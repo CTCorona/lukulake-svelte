@@ -22,11 +22,11 @@
 	<ImagoVariantIcon />
 	<div>
 		<!-- svelte-ignore a11y_invalid_attribute -->
-		<a href="#">Aviso legal</a> - 
+		<a href="#">Aviso legal</a> -
 		<!-- svelte-ignore a11y_invalid_attribute -->
-      <a href="#">Política de privacidad</a> -
+		<a href="#">Política de privacidad</a> -
 		<!-- svelte-ignore a11y_invalid_attribute -->
 		<a href="#">Política de cookies</a>
 	</div>
-	<p class={css({ fontWeight: 'bold' })}>© 2024 Luku Lake by Christian Corona</p>
+	<p class={css({ fontWeight: 'bold' })}>© 2024 Luku Lake</p>
 </footer>
