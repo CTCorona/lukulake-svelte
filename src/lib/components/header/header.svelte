@@ -4,6 +4,7 @@
 	import { lenis } from 'lenis-svelte';
 	import { cva } from 'styled-system/css';
 	import { onMount } from 'svelte';
+	import { sendPosthogEvent } from '$lib/datalayer';
 
 	const headerStyle = cva({
 		base: {
@@ -39,15 +40,12 @@
 
 	onMount(() => {
 		$lenisInstance?.on('scroll', (event) => {
-			if (event.targetScroll > 0) {
-				isScrolled = true;
-			} else {
-				isScrolled = false;
-			}
+			isScrolled = event.targetScroll > 0;
 		});
 	});
 
 	function handleClick() {
+		sendPosthogEvent({ eventName: 'click-contacto' });
 		$lenisInstance.scrollTo('#form', { offset: -100 });
 	}
 </script>

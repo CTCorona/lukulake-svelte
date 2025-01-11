@@ -43,7 +43,8 @@
 		"@pandacss/studio": "^0.51.1",
 		"embla-carousel-svelte": "^8.5.2",
 		"lenis-svelte": "^0.2.0",
-		"motion": "^11.17.0"
+		"motion": "^11.17.0",
+		"posthog-js": "^1.205.0"
 	},
 	"engines": {
 		"node": ">=20.0.0"
