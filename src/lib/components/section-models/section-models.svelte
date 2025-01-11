@@ -1,60 +1,14 @@
 <script lang="ts">
-	import FoxIcon from '$lib/assets/icons/fox-icon.svelte';
-	import MooseIcon from '$lib/assets/icons/moose-icon.svelte';
-	import OwlIcon from '$lib/assets/icons/owl-icon.svelte';
+	import Carousel from '$lib/components/section-models/carousel.svelte';
+	import {
+		shoesGalleryData,
+		shoeSizes,
+		type ShoeSize
+	} from '$lib/components/section-models/shoes-data';
 	import Animation from '$lib/components/ui/animation.svelte';
 	import Heading from '$lib/components/ui/heading.svelte';
 	import { css } from 'styled-system/css';
 	import { hstack } from 'styled-system/patterns';
-	import { type Component } from 'svelte';
-
-	type ShoeSize = {
-		icon: Component;
-		name: string;
-		size: 'small' | 'medium' | 'large';
-		talla: string;
-		meses: string;
-		tamano_pie: {
-			largo: string;
-			ancho: string;
-		};
-	};
-
-	const shoeSizes: ShoeSize[] = [
-		{
-			icon: OwlIcon,
-			name: 'Ardilla',
-			size: 'small',
-			talla: '18/19',
-			meses: '9 a 12 meses',
-			tamano_pie: {
-				largo: '10,3cm - 11,3cm',
-				ancho: '5,2cm'
-			}
-		},
-		{
-			icon: FoxIcon,
-			name: 'Zorro',
-			size: 'medium',
-			talla: '20/21',
-			meses: '12 a 18 meses',
-			tamano_pie: {
-				largo: '11,5cm - 12,5cm',
-				ancho: '5,4cm'
-			}
-		},
-		{
-			icon: MooseIcon,
-			name: 'Ciervo',
-			size: 'large',
-			talla: '22/23',
-			meses: '18 a 24 meses',
-			tamano_pie: {
-				largo: '12,7cm - 13,7cm',
-				ancho: '5,6cm'
-			}
-		}
-	];
 </script>
 
 {#snippet card(shoeData: ShoeSize)}
@@ -87,6 +41,7 @@
 	<Animation>
 		<Heading>Descubre todos los modelos</Heading>
 	</Animation>
+	<Carousel slidesData={shoesGalleryData} />
 	<div class={hstack({ gap: 10, justifyContent: 'center' })}>
 		{#each shoeSizes as cardShoe, index}
 			<Animation delay={index * 0.2}>
