@@ -60,6 +60,9 @@ export default defineConfig({
 					secondary: {
 						DEFAULT: {
 							value: '{colors.orange.darkest}'
+						},
+						light: {
+							value: '{colors.orange.light}'
 						}
 					}
 				}

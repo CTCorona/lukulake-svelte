@@ -74,7 +74,6 @@
 
 	function handleCarouselScroll() {
 		if (emblaApi) {
-			console.log(emblaApi.scrollProgress());
 			animate(scrollBarRef, { scaleX: emblaApi.scrollProgress() });
 		}
 	}

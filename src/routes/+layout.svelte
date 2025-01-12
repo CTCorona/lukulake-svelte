@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Footer from '$lib/components/footer/footer.svelte';
 	import Header from '$lib/components/header/header.svelte';
+	import Navigation from '$lib/components/navigation/navigation.svelte';
 	import { lenis } from 'lenis-svelte';
 	import { container } from 'styled-system/patterns';
 	import '../app.css';
@@ -9,6 +10,7 @@
 </script>
 
 <Header />
+<Navigation />
 <main class={container()} use:lenis>
 	{@render children()}
 </main>

@@ -9,6 +9,17 @@
 	import VerticalDivider from '$lib/components/ui/vertical-divider.svelte';
 </script>
 
+<svelte:head>
+	<title>Luku Lake</title>
+	<meta
+		name="description"
+		content="Luku Lake is a minimal, seo friendly, accessible portfolio and blog for developers."
+	/>
+	<meta name="keywords" content="portfolio, blog, minimal, seo, accessible, developer" />
+	<meta name="author" content="Christian Corona" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+</svelte:head>
+
 <Intro />
 <VerticalDivider />
 <SectionNature />
