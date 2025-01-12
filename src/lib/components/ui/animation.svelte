@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { animate, inView } from 'motion';
 	import { css } from 'styled-system/css';
-	import { type Snippet } from 'svelte';
+	import { onMount, type Snippet } from 'svelte';
 
 	const animationWrapperStyle = css({
 		overflow: 'hidden'
@@ -22,7 +22,7 @@
 
 	let ref: HTMLDivElement;
 
-	$effect(() => {
+	onMount(() => {
 		inView(
 			ref,
 			(child) => {

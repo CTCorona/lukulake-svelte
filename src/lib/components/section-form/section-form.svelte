@@ -11,7 +11,6 @@
 <section
 	class={css({
 		border: 'main',
-		bgImage: `url(${ImgForm})`,
 		pos: 'relative',
 		mx: 'auto',
 		w: '2/3',

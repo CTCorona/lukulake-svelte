@@ -5,23 +5,18 @@
 	import { cva } from 'styled-system/css';
 	import { onMount } from 'svelte';
 	import { sendPosthogEvent } from '$lib/datalayer';
+	import { container } from 'styled-system/patterns';
 
 	const headerStyle = cva({
 		base: {
 			bg: 'white',
-			p: 5,
-			display: 'flex',
-			alignItems: 'center',
-			justifyContent: 'space-between',
 			mb: 12,
 			zIndex: 1,
 			pos: 'sticky',
 			top: 0,
 			transition: 'shadow',
 			transitionDuration: '300ms',
-			md: {
-				px: '24'
-			}
+			py: 5
 		},
 		variants: {
 			scrolled: {
@@ -35,10 +30,16 @@
 		}
 	});
 
+	const headerContainerStyle = container({
+		display: 'flex',
+		alignItems: 'center',
+		justifyContent: 'space-between'
+	});
+
 	const lenisInstance = lenis.root();
 	let isScrolled = $state(false);
 
-	onMount(() => {
+	$effect(() => {
 		$lenisInstance?.on('scroll', (event) => {
 			isScrolled = event.targetScroll > 0;
 		});
@@ -51,6 +52,8 @@
 </script>
 
 <header class={headerStyle({ scrolled: isScrolled })}>
-	<Logo />
-	<Button onclick={handleClick} variant="primary">Contacto</Button>
+	<div class={headerContainerStyle}>
+		<Logo />
+		<Button onclick={handleClick} variant="primary">Contacto</Button>
+	</div>
 </header>
