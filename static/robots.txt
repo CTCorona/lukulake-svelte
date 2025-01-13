@@ -1,0 +1,33 @@
+# robots.txt file to prevent all search engines from indexing the SvelteKit website
+
+# Block all robots/crawlers
+User-agent: *
+
+# Prevent access to all content
+Disallow: /
+
+# SvelteKit-specific paths to block
+Disallow: /_app/
+Disallow: /build/
+
+# Common SvelteKit route patterns
+Disallow: /*?*
+Disallow: /*/__layout
+Disallow: /*/__error
+Disallow: /api/
+
+# Block common search engine bots specifically
+User-agent: Googlebot
+Disallow: /
+
+User-agent: Bingbot
+Disallow: /
+
+User-agent: Slurp
+Disallow: /
+
+User-agent: DuckDuckBot
+Disallow: /
+
+# Add noindex meta tag directive
+X-Robots-Tag: noindex, nofollow
