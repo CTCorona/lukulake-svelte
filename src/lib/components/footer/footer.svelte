@@ -1,6 +1,6 @@
 <script>
-	import ImagoVariantIcon from '$lib/assets/icons/imago-variant-icon.svelte';
-	import { css } from 'styled-system/css';
+	import ImagoVariantIcon from '$lib/assets/icons/imago-variant-icon.svelte'
+	import { css } from 'styled-system/css'
 
 	const footerStyles = css({
 		bg: 'primary',
@@ -15,12 +15,12 @@
 			py: 12,
 			px: 16
 		}
-	});
+	})
 </script>
 
 <footer class={footerStyles}>
 	<ImagoVariantIcon />
-	<div>
+	<div class={css({ textAlign: 'center' })}>
 		<!-- svelte-ignore a11y_invalid_attribute -->
 		<a href="#">Aviso legal</a> -
 		<!-- svelte-ignore a11y_invalid_attribute -->
@@ -28,5 +28,5 @@
 		<!-- svelte-ignore a11y_invalid_attribute -->
 		<a href="#">Política de cookies</a>
 	</div>
-	<p class={css({ fontWeight: 'bold' })}>© 2024 Luku Lake</p>
+	<p class={css({ fontWeight: 'bold' })}>© 2021 Luku Lake</p>
 </footer>

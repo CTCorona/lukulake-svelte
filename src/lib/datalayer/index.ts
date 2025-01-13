@@ -1,12 +1,12 @@
-import posthog from 'posthog-js';
+import posthog from 'posthog-js'
 
-type EventName = 'click-contacto' | 'click-anuncio' | 'click-footer';
+type EventName = 'click-contacto' | 'click-logo'
 
 type PosthogEvent = {
-	eventName: EventName;
-	properties?: Record<string, string>;
-};
+	eventName: EventName
+	properties?: Record<string, string>
+}
 
 export function sendPosthogEvent({ eventName, properties }: PosthogEvent) {
-	return posthog.capture(eventName, properties);
+	return posthog.capture(eventName, properties)
 }

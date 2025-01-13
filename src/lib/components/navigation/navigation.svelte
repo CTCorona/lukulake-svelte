@@ -10,12 +10,15 @@
 		top: 120,
 		w: 'full',
 		zIndex: 10,
-		display: 'flex',
+		display: 'none',
 		mx: 'auto',
 		left: 0,
 		right: 0,
 		justifyContent: 'flex-end',
-		pointerEvents: 'none'
+		pointerEvents: 'none',
+		lg: {
+			display: 'flex'
+		}
 	})
 
 	const navListStyle = css({

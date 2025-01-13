@@ -1,14 +1,14 @@
 <script lang="ts">
-	import Carousel from '$lib/components/section-models/carousel.svelte';
+	import Carousel from '$lib/components/section-models/carousel.svelte'
 	import {
 		shoesGalleryData,
 		shoeSizes,
 		type ShoeSize
-	} from '$lib/components/section-models/shoes-data';
-	import Animation from '$lib/components/ui/animation.svelte';
-	import Heading from '$lib/components/ui/heading.svelte';
-	import { css } from 'styled-system/css';
-	import { hstack } from 'styled-system/patterns';
+	} from '$lib/components/section-models/shoes-data'
+	import Animation from '$lib/components/ui/animation.svelte'
+	import Heading from '$lib/components/ui/heading.svelte'
+	import { css } from 'styled-system/css'
+	import { hstack } from 'styled-system/patterns'
 </script>
 
 {#snippet card(shoeData: ShoeSize)}
@@ -42,7 +42,14 @@
 		<Heading>Descubre todos los modelos</Heading>
 	</Animation>
 	<Carousel slidesData={shoesGalleryData} />
-	<div class={hstack({ gap: 10, justifyContent: 'center' })}>
+	<div
+		class={css({
+			display: 'flex',
+			gap: 10,
+			justifyContent: 'center',
+			flexDir: 'column',
+			lg: { flexDir: 'row' }
+		})}>
 		{#each shoeSizes as cardShoe, index}
 			<Animation delay={index * 0.2}>
 				{@render card(cardShoe)}

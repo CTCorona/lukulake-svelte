@@ -3,7 +3,6 @@
 	import Button from '$lib/components/ui/button.svelte'
 	import { lenis } from 'lenis-svelte'
 	import { cva } from 'styled-system/css'
-	import { onMount } from 'svelte'
 	import { sendPosthogEvent } from '$lib/datalayer'
 	import { container } from 'styled-system/patterns'
 
@@ -49,11 +48,17 @@
 		sendPosthogEvent({ eventName: 'click-contacto' })
 		$lenisInstance.scrollTo('#form', { offset: -100 })
 	}
+	function handleLogoClick() {
+		sendPosthogEvent({ eventName: 'click-logo' })
+		$lenisInstance.scrollTo(0)
+	}
 </script>
 
 <header class={headerStyle({ scrolled: isScrolled })}>
 	<div class={headerContainerStyle}>
-		<Logo />
+		<button onclick={handleLogoClick}>
+			<Logo />
+		</button>
 		<Button onclick={handleClick} variant="primary">Contacto</Button>
 	</div>
 </header>

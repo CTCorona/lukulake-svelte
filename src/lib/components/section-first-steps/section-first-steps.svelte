@@ -1,13 +1,13 @@
 <script lang="ts">
-	import FlexibleIcon from '$lib/assets/icons/flexible-icon.svelte';
-	import SustainableIcon from '$lib/assets/icons/sustainable-icon.svelte';
-	import WalkingIcon from '$lib/assets/icons/walking-icon.svelte';
-	import Animation from '$lib/components/ui/animation.svelte';
-	import Heading from '$lib/components/ui/heading.svelte';
-	import Typography from '$lib/components/ui/typography.svelte';
-	import { css } from 'styled-system/css';
-	import { hstack, vstack } from 'styled-system/patterns';
-	import { type Component } from 'svelte';
+	import FlexibleIcon from '$lib/assets/icons/flexible-icon.svelte'
+	import SustainableIcon from '$lib/assets/icons/sustainable-icon.svelte'
+	import WalkingIcon from '$lib/assets/icons/walking-icon.svelte'
+	import Animation from '$lib/components/ui/animation.svelte'
+	import Heading from '$lib/components/ui/heading.svelte'
+	import Typography from '$lib/components/ui/typography.svelte'
+	import { css } from 'styled-system/css'
+	import { stack, vstack } from 'styled-system/patterns'
+	import { type Component } from 'svelte'
 
 	const gridItems = [
 		{
@@ -28,13 +28,13 @@
 			description:
 				'Adaptación total al pie del bebé que permite un movimiento libre y completamente respetuoso con su desarrollo, gracias a la flexibilidad de las punteras, los talones y las suelas ultra finas'
 		}
-	];
+	]
 </script>
 
 {#snippet item(icon: Component, title: string, description: string)}
 	<article class={vstack({ gap: 4, maxW: '80' })}>
 		<svelte:component this={icon} />
-		<h3 class={css({ fontWeight: 'bold', fontSize: '2xl' })}>{title}</h3>
+		<h3 class={css({ fontWeight: 'bold', fontSize: '2xl', textAlign: 'center' })}>{title}</h3>
 		<Typography fluid>{description}</Typography>
 	</article>
 {/snippet}
@@ -49,7 +49,15 @@
 			tendrá la sensación de caminar descalzo. Y nosotros, la seguridad de que está protegido
 		</Typography>
 	</Animation>
-	<div class={hstack({ justifyContent: 'center', gap: 10 })}>
+	<div
+		class={css({
+			display: 'flex',
+			justifyContent: 'center',
+			alignItems: 'center',
+			gap: 10,
+			flexDir: 'column',
+			md: { flexDir: 'row' }
+		})}>
 		{#each gridItems as gridItem, index}
 			<Animation delay={index * 0.2}>
 				{@render item(gridItem.icon, gridItem.title, gridItem.description)}
