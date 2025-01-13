@@ -5,6 +5,9 @@
   "bracketSpacing": true,
   "trailingComma": "none",
   "printWidth": 100,
+  "bracketSameLine": true,
+  "proseWrap": "preserve",
+  "semi": false,
   "plugins": [
     "prettier-plugin-svelte"
   ],
