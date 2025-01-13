@@ -24,8 +24,8 @@
 
 	<!-- Font preloads -->
 	<link rel="preload" href="/fonts/Solomon-Sans-Bold.woff" as="font" type="font/woff"/>
-	<link rel="preload" href="/fonts/Solomon-Sans-Normal.woff.woff" as="font" type="font/woff"/>
-	<link rel="preload" href="/fonts/Solomon-Sans-SemiBold.woff.woff" as="font" type="font/woff"/>
+	<link rel="preload" href="/fonts/Solomon-Sans-Normal.woff" as="font" type="font/woff"/>
+	<link rel="preload" href="/fonts/Solomon-Sans-SemiBold.woff" as="font" type="font/woff"/>
 
 	<!-- Open Graph / Facebook -->
 	<meta property="og:type" content="website" />
