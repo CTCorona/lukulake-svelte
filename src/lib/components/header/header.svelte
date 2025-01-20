@@ -56,7 +56,7 @@
 
 <header class={headerStyle({ scrolled: isScrolled })}>
 	<div class={headerContainerStyle}>
-		<button onclick={handleLogoClick}>
+		<button aria-label="logo button" onclick={handleLogoClick}>
 			<Logo />
 		</button>
 		<Button onclick={handleClick} variant="primary">Contacto</Button>

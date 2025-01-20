@@ -16,9 +16,9 @@
 		<div class={hstack({ gap: 8 })}>
 			<svelte:component this={shoeData.icon} class={css({ width: 40, height: 40 })} />
 			<div>
-				<h4 class={css({ fontWeight: 'bold', fontSize: 'xl' })}>
+				<p class={css({ fontWeight: 'bold', fontSize: 'xl' })}>
 					{shoeData.name} ({shoeData.size})
-				</h4>
+				</p>
 				<p>
 					<span class={css({ fontWeight: 'bold' })}>Talla:</span>
 					{shoeData.talla}
