@@ -3,7 +3,7 @@
 	"version": "0.0.1",
 	"type": "module",
 	"scripts": {
-		"prepare": "panda codegen",
+		"prepare": "svelte-kit sync && panda codegen",
 		"studio": "panda studio",
 		"dev": "vite dev",
 		"build": "vite build",
