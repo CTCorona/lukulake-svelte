@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import ImagoVariantIcon from '$lib/assets/icons/imago-variant-icon.svelte'
 	import { css } from 'styled-system/css'
 
