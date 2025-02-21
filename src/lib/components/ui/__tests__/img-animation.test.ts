@@ -1,13 +1,7 @@
-import { render, screen } from '@testing-library/svelte'
-import { describe, it, expect, vi } from 'vitest'
+import { render } from '@testing-library/svelte'
+import { describe, it, expect } from 'vitest'
 import ImgAnimationTest from './img-animation.test.svelte'
 import { animate, scroll } from 'motion'
-
-// Mock motion library
-vi.mock('motion', () => ({
-	animate: vi.fn(),
-	scroll: vi.fn().mockImplementation(() => vi.fn())
-}))
 
 describe('ImgAnimation', () => {
 	it('renders children content', () => {
@@ -30,10 +24,7 @@ describe('ImgAnimation', () => {
 		render(ImgAnimationTest)
 
 		// First verify the animate call
-		expect(animate).toHaveBeenCalledWith(
-			expect.any(HTMLImageElement), 
-			{ y: [-70, 70] }
-		)
+		expect(animate).toHaveBeenCalledWith(expect.any(HTMLImageElement), { y: [-70, 70] })
 
 		// Then verify the scroll call
 		expect(scroll).toHaveBeenCalledWith(

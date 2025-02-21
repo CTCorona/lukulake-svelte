@@ -3,7 +3,7 @@
 	import type { Snippet } from 'svelte';
 	import type { SvelteHTMLElements } from 'svelte/elements';
 
-	type Props = SvelteHTMLElements['button'] & {
+	export type Props = SvelteHTMLElements['button'] & {
 		children: Snippet;
 		variant?: 'primary' | 'secondary';
 	};

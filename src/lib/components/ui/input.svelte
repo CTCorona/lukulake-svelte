@@ -1,9 +1,9 @@
 <script lang="ts">
-	import { sva } from 'styled-system/css';
+	import { sva } from 'styled-system/css'
 
-	type InputProps = Partial<HTMLInputElement> & {
-		label: string;
-	};
+	export type InputProps = Partial<HTMLInputElement> & {
+		label: string
+	}
 
 	const inputStyle = sva({
 		slots: ['label', 'input', 'textarea'],
@@ -43,9 +43,9 @@
 				}
 			}
 		}
-	});
+	})
 
-	const { id, name, placeholder, label, type, value }: InputProps = $props();
+	const { id, name, placeholder, label, type, value }: InputProps = $props()
 </script>
 
 <label class={inputStyle().label} for={id}>{label}</label>

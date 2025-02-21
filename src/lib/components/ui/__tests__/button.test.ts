@@ -1,7 +1,6 @@
 import { render, screen } from '@testing-library/svelte'
 import { describe, it, expect } from 'vitest'
 import ButtonTest from './button.test.svelte'
-import ButtonSecondaryTest from './button-secondary.test.svelte'
 
 describe('Button', () => {
 	it('renders children content', () => {
@@ -21,7 +20,7 @@ describe('Button', () => {
 	})
 
 	it('applies secondary variant styles when specified', () => {
-		render(ButtonSecondaryTest)
+		render(ButtonTest, { variant: 'secondary' })
 
 		const button = screen.getByRole('button')
 
@@ -29,7 +28,7 @@ describe('Button', () => {
 	})
 
 	it('forwards HTML button attributes', () => {
-		render(ButtonTest)
+		render(ButtonTest, { type: 'submit' })
 
 		const button = screen.getByRole('button')
 

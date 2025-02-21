@@ -1,16 +1,7 @@
 import { render, screen } from '@testing-library/svelte'
 import { describe, it, expect, vi } from 'vitest'
 import AnimationTest from './animation.test.svelte'
-import AnimationWithDelay from './animation-w-delay.test.svelte'
 import { animate } from 'motion'
-
-vi.mock('motion', () => ({
-	inView: vi.fn((element, callback) => {
-		callback({ target: element })
-		return vi.fn()
-	}),
-	animate: vi.fn()
-}))
 
 describe('Animation', () => {
 	test('renders children content', () => {
@@ -32,7 +23,7 @@ describe('Animation', () => {
 	})
 
 	it('accepts delay prop', () => {
-		const { container } = render(AnimationWithDelay)
+		const { container } = render(AnimationTest, { delay: 0.5 })
 
 		const child = container.querySelector('.animation-child')
 

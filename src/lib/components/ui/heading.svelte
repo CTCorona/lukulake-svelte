@@ -1,13 +1,13 @@
 <script lang="ts">
-	import { cva } from 'styled-system/css';
-	import type { Snippet } from 'svelte';
-	import type { SvelteHTMLElements } from 'svelte/elements';
+	import { cva } from 'styled-system/css'
+	import type { Snippet } from 'svelte'
+	import type { SvelteHTMLElements } from 'svelte/elements'
 
-	type Props = {
-		tag?: keyof Pick<SvelteHTMLElements, 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'>;
-		children: Snippet;
-		gutterBottom?: boolean;
-	};
+	export type Props = {
+		tag?: keyof Pick<SvelteHTMLElements, 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'>
+		children: Snippet
+		gutterBottom?: boolean
+	}
 
 	const headingStyle = cva({
 		base: {
@@ -31,9 +31,9 @@
 		defaultVariants: {
 			gutterBottom: false
 		}
-	});
+	})
 
-	const { children, tag = 'h2', gutterBottom }: Props = $props();
+	const { children, tag = 'h2', gutterBottom }: Props = $props()
 </script>
 
 <svelte:element this={tag} class={headingStyle({ gutterBottom })}>

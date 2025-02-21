@@ -15,7 +15,7 @@ export default defineConfig({
 		globals: true,
 		include: ['src/**/*.{test,spec}.{js,ts}'],
 		environment: 'jsdom',
-		setupFiles: ['./vitest-setup.ts'],
+		setupFiles: ['./src/test/vitest-setup.ts'],
 		coverage: {
 			provider: 'v8',
 			include: ['src/**/*.{ts,js,svelte}'],

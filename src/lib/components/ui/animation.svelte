@@ -13,7 +13,7 @@
 		transform: 'translateY(100%)'
 	});
 
-	type Props = {
+	export type Props = {
 		children: Snippet;
 		delay?: number;
 	};

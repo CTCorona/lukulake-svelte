@@ -1,5 +1,7 @@
-<script>
-	import Animation from '../animation.svelte'
+<script lang="ts">
+	import Animation, { type Props as AnimationProps } from '../animation.svelte'
+
+	const { delay }: Pick<AnimationProps, 'delay'> = $props()
 </script>
 
-<Animation>Test Content</Animation>
+<Animation {delay}>Test Content</Animation>
